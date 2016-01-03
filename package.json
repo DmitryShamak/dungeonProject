@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/DmitryShamak/dungeonProject/issues"
   },
-  "homepage": "https://github.com/DmitryShamak/dungeonProject"
+  "homepage": "https://github.com/DmitryShamak/dungeonProject",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
 }

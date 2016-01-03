@@ -20,6 +20,7 @@
     "bootstrap": "~3.3.6",
     "paper": "~0.9.25",
     "moment": "~2.11.0",
-    "numeral": "~1.5.3"
+    "numeral": "~1.5.3",
+    "angular-ui-router": "~0.2.15"
   }
 }
