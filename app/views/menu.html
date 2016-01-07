@@ -1,8 +1,14 @@
 <div class="view-wrapper">
 	<div class="menu-wrapper">
 		<div class="menu">
-			<div ui-sref="lobby" class="btn">Start new Game</div>
-	    	<div ui-sref="findlobby" class="btn">Find Lobby</div>
+			<h4 class="text-center" ng-if="profile">
+				{{profile.fname}} {{profile.lname}}
+				<a ui-sref="logout" title="Log Out">LogOut</a>
+			</h4>
+			<h4 class="text-center" ng-if="!profile" ng-disabled="!profile">YOU ARE NOT LOGGED, BITCH!</h4>
+			<div ui-sref="lobby" ng-disabled="!profile" class="btn">Start new Game</div>
+	    	<div ui-sref="findlobby" ng-disabled="!profile" class="btn">Find Lobby</div>
+	    	<div ui-sref="login" class="btn">Log In</div>	
 			<div ui-sref="signup" class="btn">Sign Up</div>		
 			<div ui-sref="rules" class="btn">Rules</div>
 		</div>

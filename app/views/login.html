@@ -1,0 +1,27 @@
+<div class="view-wrapper">
+	<div class="header">
+		<a ui-sref="menu">Menu</a>
+	</div>
+	<div class="container-fluid">
+		<form class="alert" style="width: 400px; margin: 20px auto;" ng-model="form" ng-submit="logIn(form);">
+			<div class="row">
+				<div class="col-xs-12">
+					<input class="form-control" type="text" ng-model="form.email" placeholder="Email" />
+				</div>
+				<div class="col-xs-12">
+					<input class="form-control" type="password" ng-model="form.pass" placeholder="Password" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<button class="btn btn-success">Log In</button>
+				</div>
+			</div>
+			<div class="row" ng-if="logInErrorMessage">
+				<div class="col-xs-12 text-center">
+					<span class="alert alert-danger">{{logInErrorMessage}}</span>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,5 +1,42 @@
-<div class="view-wrapper row">
-	<div class="col-xs-12">
+<div class="view-wrapper">
+	<div class="header">
 		<a ui-sref="menu">Menu</a>
+	</div>
+	<div class="content container-fluid">
+		<div class="row">
+			<div class="col-xs-9">
+				<input type="text" placeholder="Looby Name" />
+			</div>
+			<div class="col-xs-3">
+				<div class="btn btn-primary">Locked</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div ng-repeat="hero in lobby.heroes" class="hero">
+					Hero
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6">
+				<div ng-repeat="player in lobby.players" class="player alert">
+					<span>{{player.name}}</span>
+					<span>({{player.sex}})</span>
+					<span>{{player.ready ? 'Ready' : "NOT Ready"}}</span>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div ng-repeat="param in lobby.params" class="param alert">
+					<span>{{param.title}}</span>
+					<span>({{param.description}})</span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<div ng-disabled="!lobby.canStart" class="btn btn-success">Start</div>
+			</div>
+		</div>
 	</div>
 </div>

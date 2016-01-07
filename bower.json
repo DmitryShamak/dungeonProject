@@ -21,6 +21,8 @@
     "paper": "~0.9.25",
     "moment": "~2.11.0",
     "numeral": "~1.5.3",
-    "angular-ui-router": "~0.2.15"
+    "angular-ui-router": "~0.2.15",
+    "lodash": "~3.10.1",
+    "font-awesome": "fontawesome#~4.5.0"
   }
 }

@@ -1,1 +1,61 @@
-<div class="view-wrapper row"></div>
+<div class="view-wrapper">
+	<div class="header">
+		<a ui-sref="menu">Menu</a>
+	</div>
+	<div class="container-fluid">
+		<form ng-model="profile" ng-submit="saveProfileChanges(profile);">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<input class="form-control" type="text" ng-model="profile.fname" placeholder="First Name" />
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<input class="form-control" type="text" ng-model="profile.lname" placeholder="Last Name" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<input class="form-control" type="password" ng-model="profile.pass" placeholder="Password" />
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<input class="form-control" type="password" ng-model="profile.cpass" placeholder="Confirm Password" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<input class="form-control" type="text" ng-model="profile.email" placeholder="Email" />
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<div class="form-control">
+						<input type="checkbox" ng-model="profile.news" />
+						<label>Send me last news</label>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<select class="form-control" ng-model="profile.sex">
+						<option value="" disabled selected>Select your sex</option>
+						<option value="male">Male</option>
+						<option value="female">Baba</option>
+					</select>
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<input class="form-control" type="date" ng-model="profile.dob" placeholder="Date Of Birth" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<input class="form-control" type="text" ng-model="profile.country" placeholder="Country" />
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<input class="form-control" type="text" ng-model="profile.city" placeholder="City" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 text-right">
+					<button class="btn btn-success">Save</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
